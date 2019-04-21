@@ -1,0 +1,5 @@
+service fih_service_fver /vendor/bin/fih_service_fver
+    user root
+    group root
+    class core
+    oneshot

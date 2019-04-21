@@ -1,0 +1,7 @@
+on fs
+    setprop ro.product.vendor.device ROON_sprout
+    setprop ro.boot.product.hardware.sku ROON
+    setprop ro.nfc_hw_support true
+    setprop ro.sec_nfc_gsma_support true
+on fs
+	setprop ro.vendor.build.fingerprint Nokia/Rooster_00WW/ROON_sprout:9/PPR1.180610.011/00WW_2_230:user/release-keys

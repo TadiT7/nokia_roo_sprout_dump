@@ -1,0 +1,41 @@
+service box-hal-1-0 /vendor/bin/hw/vendor.fih.hardware.box@1.0-service
+    class hal
+    user system
+    group system
+
+
+on fs
+    mkdir /vendor/BBSYS 0770 system system
+    chown system system /vendor/BBSYS
+    chmod 0770 /vendor/BBSYS
+    chmod 0660 /dev/fih
+    chown root system /dev/fih
+    restorecon_recursive /vendor/BBSYS
+
+       
+on post-fs-data
+    mkdir /vendor/BBSYS/box 0770 system system
+    chown system system /vendor/BBSYS/box
+    chmod 0770 /vendor/BBSYS/box
+    mkdir /vendor/BBSYS/box/report 0770 system system
+    chown system system /vendor/BBSYS/box/report
+    chmod 0770 /vendor/BBSYS/box/report
+    mkdir /data/misc/box 0770 system system    
+    chown system system /data/misc/box    
+    chmod 0770 /data/misc/box    
+    mkdir /data/misc/box/report 0770 system system    
+    chown system system /data/misc/box/report    
+    chmod 0770 /data/misc/box/report    
+   
+    
+   
+on property:persist.vendor.box-hal-1-0=on
+    start box-hal-1-0
+
+on property:persist.vendor.box-hal-1-0=off
+    stop box-hal-1-0
+
+on property:persist.vendor.box-hal-1-0=restart
+    stop box-hal-1-0
+    setprop persist.vendor.box-hal-1-0 on
+    

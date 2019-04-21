@@ -1,0 +1,288 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- ******************* -->
+<!-- Profile for FIH basic -->
+<!-- [MCS-836] HouILin -->
+<!-- ******************* -->
+
+<profile-data>
+    <!--
+        Profile fomula
+            <TAG>VALUE</TAG>    **TAG = Feature name + Requiement key
+
+        Example:
+        <Ecclist_000385>112,911,110,119</Ecclist_000385>
+    -->
+    <!-- Common -->
+
+    <!-- CC/SS/USSD -->
+    <!-- {{ [D78.F-283] -->
+    <!-- 
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category
+        - Condition: there are following values:
+            - Condition=0: ECC only NO SIM, ATDE
+            - Condition=1: ECC always, ATDE
+            - Condition=2: FAKE ECC, Always ATD, but show as EC
+            - Condition=3: ECC when NO SIM, ATDE; FAKE ECC WITH SIM, ATD
+            - Condition=4: Normal CALL for MCCMNC(SIM INSERT)
+            - Condition=5: ECC for MCCMNC(SIM INSERT), ATD, show as EC
+    -->
+    <!-- General Ecc -->
+    <EccEntry Mcc="0" Ecc="000" Category="0" Condition="0" />
+    <EccEntry Mcc="0" Ecc="08" Category="0" Condition="0"  />
+    <EccEntry Mcc="0" Ecc="118" Category="0" Condition="0"  />
+    <EccEntry Mcc="0" Ecc="999" Category="0" Condition="0"  />
+    <EccEntry Mcc="0" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="0" Ecc="911" Category="0" Condition="1"  />
+    <EccEntry Mcc="0" Ecc="110" Category="0" Condition="0"  />
+    <EccEntry Mcc="0" Ecc="119" Category="0" Condition="0"  />
+
+
+    <!-- MCC 460 cn -->
+    <EccEntry Mcc="460" Ecc="000" Category="0" Condition="1" />
+    <EccEntry Mcc="460" Ecc="08" Category="0" Condition="1"  />
+    <EccEntry Mcc="460" Ecc="118" Category="0" Condition="1"  />
+    <EccEntry Mcc="460" Ecc="999" Category="0" Condition="3"  />
+    <EccEntry Mcc="460" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="460" Ecc="911" Category="0" Condition="1"  />
+    <EccEntry Mcc="460" Ecc="110" Category="0" Condition="3"  />
+    <EccEntry Mcc="460" Ecc="119" Category="0" Condition="3"  />
+    <EccEntry Mcc="460" Ecc="120" Category="0" Condition="3" />
+    <EccEntry Mcc="460" Ecc="122" Category="0" Condition="3" />
+    
+    <!-- MCC 466 tw -->
+    <EccEntry Mcc="466" Ecc="112" Category="0" Condition="1" />
+    <EccEntry Mcc="466" Ecc="911" Category="0" Condition="1"  />
+    <EccEntry Mcc="466" Ecc="110" Category="0" Condition="3"  />
+    <EccEntry Mcc="466" Ecc="119" Category="0" Condition="3"  />
+
+    <!-- MCC 404 in -->
+    <EccEntry Mcc="404" Ecc="112" Category="0" Condition="2"  />
+    <EccEntry Mcc="404" Ecc="911" Category="0" Condition="2"  />
+    <EccEntry Mcc="404" Ecc="100" Category="0" Condition="2" />
+    <EccEntry Mcc="404" Ecc="101" Category="0" Condition="2" />
+    <EccEntry Mcc="404" Ecc="102" Category="0" Condition="2"  />
+    <EccEntry Mcc="404" Ecc="104" Category="0" Condition="2"  />
+    <EccEntry Mcc="404" Ecc="108" Category="0" Condition="2" />
+    <!-- MCC 405 in -->    
+    <EccEntry Mcc="405" Ecc="112" Category="0" Condition="2"  />
+    <EccEntry Mcc="405" Ecc="911" Category="0" Condition="2"  />    
+    <EccEntry Mcc="405" Ecc="100" Category="0" Condition="2" />
+    <EccEntry Mcc="405" Ecc="101" Category="0" Condition="2" />
+    <EccEntry Mcc="405" Ecc="102" Category="0" Condition="2"  />
+    <EccEntry Mcc="405" Ecc="104" Category="0" Condition="2"  />    
+    <EccEntry Mcc="405" Ecc="108" Category="0" Condition="2" /> 
+    <!-- MCC 406 in -->    
+    <EccEntry Mcc="406" Ecc="112" Category="0" Condition="2"  />
+    <EccEntry Mcc="406" Ecc="911" Category="0" Condition="2"  />    
+    <EccEntry Mcc="406" Ecc="100" Category="0" Condition="2" />
+    <EccEntry Mcc="406" Ecc="101" Category="0" Condition="2" />
+    <EccEntry Mcc="406" Ecc="102" Category="0" Condition="2"  />
+    <EccEntry Mcc="406" Ecc="104" Category="0" Condition="2"  />    
+    <EccEntry Mcc="406" Ecc="108" Category="0" Condition="2" />        
+    
+    <!-- MCC 202 -->
+    <EccEntry Mcc="202" Ecc="100" Category="0" Condition="1"  />
+    <!-- MCC 206 -->
+    <EccEntry Mcc="206" Ecc="100" Category="0" Condition="1"  />
+    <!-- MCC 222 -->    
+    <EccEntry Mcc="222" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="222" Ecc="115" Category="0" Condition="1" />
+    <!-- MCC 232 -->    
+    <EccEntry Mcc="232" Ecc="114" Category="0" Condition="1" />    
+    
+    <!-- MCC 234 -->    
+    <EccEntry Mcc="234" Ecc="999" Category="0" Condition="1"  />
+    <!--[PDAP-3510][ES2P-3183][CO2P-1203] DanteTYChiu begin -->     
+    <EccEntry Mcc="235" Ecc="999" Category="0" Condition="1"  />
+    <!--[PDAP-3510][ES2P-3183][CO2P-1203] DanteTYChiu begin -->
+
+    <EccEntry Mcc="240" Ecc="112" Category="0" Condition="1"  />    
+    
+    <EccEntry Mcc="250" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="250" Ecc="101" Category="0" Condition="1"  />
+    <EccEntry Mcc="250" Ecc="102" Category="0" Condition="1"  />
+    <EccEntry Mcc="250" Ecc="103" Category="0" Condition="1"  />
+        
+    <EccEntry Mcc="262" Ecc="112" Category="0" Condition="1"  />   
+     
+    <EccEntry Mcc="276" Ecc="19" Category="0" Condition="1"  />       
+    
+    <EccEntry Mcc="310" Ecc="911" Category="0" Condition="1"  />    
+    <EccEntry Mcc="310" Ecc="112" Category="0" Condition="1"  />   
+    <EccEntry Mcc="310" Ecc="999" Category="0" Condition="1"  />   
+    <!--Mexico-->             
+    <EccEntry Mcc="334" Ecc="911" Category="0" Condition="1"  />    
+    <EccEntry Mcc="334" Ecc="112" Category="0" Condition="1"  />     
+
+
+
+    <EccEntry Mcc="414" Ecc="191" Category="0" Condition="1" />
+    <EccEntry Mcc="414" Ecc="192" Category="0" Condition="1"  />
+    <EccEntry Mcc="414" Ecc="199" Category="0" Condition="1" />   
+
+    <EccEntry Mcc="450" Ecc="111" Category="0" Condition="1"  />
+    <EccEntry Mcc="450" Ecc="112" Category="0" Condition="1" />
+    <EccEntry Mcc="450" Ecc="113" Category="0" Condition="1" />
+    <EccEntry Mcc="450" Ecc="117" Category="0" Condition="1"  />
+    <EccEntry Mcc="450" Ecc="118" Category="0" Condition="1" />    
+    <EccEntry Mcc="450" Ecc="119" Category="0" Condition="1" />
+    <EccEntry Mcc="450" Ecc="122" Category="0" Condition="1"  />
+    <EccEntry Mcc="450" Ecc="125" Category="0" Condition="1" />  
+    <EccEntry Mcc="450" Ecc="911" Category="0" Condition="1" />   
+    
+     <!--Vietnam-->  
+    <EccEntry Mcc="452" Ecc="112" Category="0" Condition="2" />
+    <EccEntry Mcc="452" Ecc="113" Category="0" Condition="2"  />
+    <EccEntry Mcc="452" Ecc="114" Category="0" Condition="2" />  
+    <EccEntry Mcc="452" Ecc="115" Category="0" Condition="2" />     
+    <EccEntry Mcc="452" Ecc="911" Category="0" Condition="2" />    
+    
+    <EccEntry Mcc="454" Ecc="110" Category="0" Condition="1" />
+    <EccEntry Mcc="454" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="454" Ecc="911" Category="0" Condition="1" />  
+    <EccEntry Mcc="454" Ecc="999" Category="0" Condition="1" />    
+     <!--Malaysia-->
+    <EccEntry Mcc="502" Ecc="112" Category="0" Condition="2" />    
+    <EccEntry Mcc="502" Ecc="911" Category="0" Condition="2" />
+    <EccEntry Mcc="502" Ecc="991" Category="0" Condition="2" />
+    <EccEntry Mcc="502" Ecc="994" Category="0" Condition="2" />  
+    <EccEntry Mcc="502" Ecc="999" Category="0" Condition="2" />
+
+    <!--[PDA-5364] Indonesia ECC list, DanteTYChiu start -->
+    <!--Indonesia-->
+    <EccEntry Mcc="510" Ecc="100" Category="0" Condition="3" />    
+    <EccEntry Mcc="510" Ecc="112" Category="0" Condition="3" />
+    <EccEntry Mcc="510" Ecc="113" Category="0" Condition="3"  />
+    <EccEntry Mcc="510" Ecc="118" Category="0" Condition="3" />  
+    <EccEntry Mcc="510" Ecc="199" Category="0" Condition="3" />  
+    <!--[PDA-5364] Indonesia ECC List, DanteTYChiu end -->    
+    
+
+    <EccEntry Mcc="515" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="515" Ecc="911" Category="0" Condition="1" />      
+    
+    <!--Thailand -->
+    <EccEntry Mcc="520" Ecc="112" Category="0" Condition="1" />    
+    <EccEntry Mcc="520" Ecc="911" Category="0" Condition="1" />  
+
+    <EccEntry Mcc="525" Ecc="112" Category="0" Condition="1" />  
+    <EccEntry Mcc="525" Ecc="911" Category="0" Condition="1" />  
+
+
+    <EccEntry Mcc="659" Ecc="112" Category="0" Condition="1" />  
+    <EccEntry Mcc="659" Ecc="911" Category="0" Condition="1" />      
+    
+    <!--Chile-->
+    <EccEntry Mcc="730" Ecc="131" Category="0" Condition="2" />  
+    <EccEntry Mcc="730" Ecc="132" Category="0" Condition="2" />
+    <EccEntry Mcc="730" Ecc="133" Category="0" Condition="1" />            
+    <EccEntry Mcc="730" Ecc="134" Category="0" Condition="2" />   
+    <EccEntry Mcc="730" Ecc="137" Category="0" Condition="2" />  
+        
+    <!--Colombia-->
+    <EccEntry Mcc="732" Ecc="123" Category="0" Condition="1" />
+    <!--[PDA-4493] Remove 123 from EC list for Claro Colombia, DanteTYChiu -->    
+    <EccEntry Mcc="732" Mnc="101" Ecc="123" Category="0" Condition="4" />
+
+    <EccEntry Mcc="852" Ecc="999" Category="0" Condition="1" />  
+    
+    <EccEntry Mcc="901" Ecc="122" Category="0" Condition="1" />  
+    <EccEntry Mcc="901" Ecc="999" Category="0" Condition="1" /> 
+
+    
+    <!--UAE-->
+    <!--[PDA-4499] DanteTYChiu begin -->
+    <EccEntry Mcc="424" Ecc="997" Category="0" Condition="3"  />
+    <EccEntry Mcc="424" Ecc="998" Category="0" Condition="3"  />
+    <!--[PDA-4499] DanteTYChiu end -->
+    <EccEntry Mcc="424" Ecc="999" Category="0" Condition="1"  />
+    
+    <!-- KSA -->
+    <!--[PDA-4499] DanteTYChiu begin -->
+    <EccEntry Mcc="420" Ecc="997" Category="0" Condition="3"  />
+    <EccEntry Mcc="420" Ecc="998" Category="0" Condition="3"  />    
+    <EccEntry Mcc="420" Ecc="993" Category="0" Condition="3"  />
+    <!--[PDA-4499] DanteTYChiu end -->
+    <EccEntry Mcc="420" Ecc="999" Category="0" Condition="1"  />    
+    
+    <!-- Bahrain -->
+    <!--[PDA-4499] DanteTYChiu begin -->
+    <EccEntry Mcc="426" Ecc="199" Category="0" Condition="3"  />
+    <EccEntry Mcc="426" Ecc="990" Category="0" Condition="3"  />    
+    <EccEntry Mcc="426" Ecc="992" Category="0" Condition="3"  />
+    <EccEntry Mcc="426" Ecc="994" Category="0" Condition="3"  />
+    <!--[PDA-4499] DanteTYChiu end -->    
+    <EccEntry Mcc="426" Ecc="999" Category="0" Condition="1"  />    
+    
+    <!-- Qatar -->
+    <EccEntry Mcc="427" Ecc="999" Category="0" Condition="1"  />
+        
+    <!-- Oman -->
+    <EccEntry Mcc="422" Ecc="9999" Category="0" Condition="1"  />
+    <EccEntry Mcc="422" Ecc="999" Category="0" Condition="1"  />
+    
+
+    <!-- Brazil -->
+    <EccEntry Mcc="714" Ecc="190" Category="0" Condition="1"  />    
+
+    <!-- Peru -->
+    <EccEntry Mcc="716" Ecc="105" Category="0" Condition="1"  />   
+    <!-- Salvador -->
+    <EccEntry Mcc="712" Ecc="122" Category="0" Condition="1"  />      
+    <!-- Rep. Dominicana -->
+    <EccEntry Mcc="370" Ecc="060" Category="0" Condition="1"  />   
+    <!-- Polish -->                      
+    <EccEntry Mcc="260" Ecc="000" Category="0" Condition="0" />
+    <EccEntry Mcc="260" Ecc="08" Category="0" Condition="0"  />
+    <EccEntry Mcc="260" Ecc="118" Category="0" Condition="0"  />
+    <EccEntry Mcc="260" Ecc="999" Category="0" Condition="0"  />
+    <EccEntry Mcc="260" Ecc="112" Category="0" Condition="1"  />
+    <EccEntry Mcc="260" Ecc="911" Category="0" Condition="1"  />
+    <EccEntry Mcc="260" Ecc="110" Category="0" Condition="0"  />
+    <EccEntry Mcc="260" Ecc="119" Category="0" Condition="0"  />
+    <!--[PDAP-3107] Polish ECC DanteTYChiu -->    
+    <EccEntry Mcc="260" Mnc="02" Ecc="997" Category="0" Condition="5" />
+    <EccEntry Mcc="260" Mnc="02" Ecc="998" Category="0" Condition="5" />
+    <EccEntry Mcc="260" Mnc="02" Ecc="999" Category="0" Condition="5" />
+    <EccEntry Mcc="260" Mnc="02" Ecc="996" Category="0" Condition="5" />
+
+    <EccEntry Mcc="456" Ecc="191" Category="0" Condition="1"  />
+    <EccEntry Mcc="456" Ecc="192" Category="0" Condition="1"  />    
+    <EccEntry Mcc="456" Ecc="199" Category="0" Condition="1"  />
+    
+    <EccEntry Mcc="457" Ecc="191" Category="0" Condition="1"  />
+    <EccEntry Mcc="457" Ecc="192" Category="0" Condition="1"  />    
+    <EccEntry Mcc="457" Ecc="199" Category="0" Condition="1"  />
+    
+    <EccEntry Mcc="706" Ecc="122" Category="0" Condition="1"  />   
+    <!-- Australia -->         
+    <EccEntry Mcc="505" Ecc="000" Category="0" Condition="1"  />   
+    <!-- New Zealand -->         
+    <EccEntry Mcc="530" Ecc="111" Category="0" Condition="1"  />   
+    
+    <!-- Switzerland -->         
+    <EccEntry Mcc="228" Ecc="117" Category="0" Condition="2"  />   
+    <EccEntry Mcc="228" Ecc="118" Category="0" Condition="2"  />   
+    <EccEntry Mcc="228" Ecc="143" Category="0" Condition="2"  />   
+    <EccEntry Mcc="228" Ecc="144" Category="0" Condition="2"  />    
+    <EccEntry Mcc="228" Ecc="145" Category="0" Condition="2"  />   
+    <EccEntry Mcc="228" Ecc="147" Category="0" Condition="2"  />     
+       
+    <!-- Liechtenstein -->         
+    <EccEntry Mcc="295" Ecc="117" Category="0" Condition="2"  />   
+    <EccEntry Mcc="295" Ecc="118" Category="0" Condition="2"  />   
+    <EccEntry Mcc="295" Ecc="143" Category="0" Condition="2"  />   
+    <EccEntry Mcc="295" Ecc="144" Category="0" Condition="2"  />    
+    <EccEntry Mcc="295" Ecc="145" Category="0" Condition="2"  />   
+    <EccEntry Mcc="295" Ecc="147" Category="0" Condition="2"  />    
+    
+    <!-- Ireland -->    
+    <EccEntry Mcc="272" Ecc="999" Category="0" Condition="1"  />        
+    <!-- Israel -->    
+    <EccEntry Mcc="425" Ecc="100" Category="0" Condition="1"  />             
+    <!--NE1N-481, 105 is a normal call for 71617-->
+    <EccEntry Mcc="716" Mnc="17" Ecc="105" Category="0" Condition="4" />
+
+</profile-data>

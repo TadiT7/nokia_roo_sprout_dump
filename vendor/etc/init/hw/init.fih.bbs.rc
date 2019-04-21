@@ -1,0 +1,4 @@
+on fs
+    # bbs file permission change
+    chown system system /vendor/BBSYS
+    restorecon_recursive /vendor/BBSYS

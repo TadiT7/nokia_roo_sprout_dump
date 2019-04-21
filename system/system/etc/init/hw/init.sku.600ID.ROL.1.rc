@@ -1,0 +1,5 @@
+on fs
+    setprop ro.product.model.display TA-1115
+on fs
+    setprop ro.camera.shuttersound.skuid 600ID
+

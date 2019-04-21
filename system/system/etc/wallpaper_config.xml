@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Wallpaper>
+    <project name="default">
+        <sku id="default">
+            <item name="ACTION_PARTNER_CUSTOMIZATION">com.android.launcher3.action.PARTNER_CUSTOMIZATION</item>
+            <item name="default_property">L</item>
+            <mapping-wallpaper type="propertyWallpaper" value="D">orangesuperioragate</mapping-wallpaper><!-- Charcoal --><!-- Baltic -->
+            <mapping-wallpaper type="propertyWallpaper" value="L">orangesuperioragate</mapping-wallpaper><!-- Navy blue -->
+            <mapping-wallpaper type="propertyWallpaper" value="W">wood</mapping-wallpaper><!-- Ultra White -->
+        </sku>
+    </project>
+</Wallpaper>

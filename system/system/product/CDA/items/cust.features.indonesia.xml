@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+
+    <!-- THIS IS CREQ-51710 Indonesia TKDN SW Requirements V3.3  -->
+    <!-- CREQ-55676 add ringtone 'Simple' -->
+    <feature name="com.indonesia.feature.PRELOAD" /><!-- To preload media_id -->
+
+
+    <!-- THIS IS CREQ-55672 Indonesia TKDN SW Requirements Version 4.2 -->
+    <!-- LOCK DOWN ON 2018.05.08 -->
+
+    <!-- CREQ-55687 security password to shut down phone  -->
+    <feature name="com.nbb.system.poweroff_encrypt" />
+
+    <!-- CREQ-55685 Add Hide Navigation Bar feature  -->
+    <feature name="com.nbb.settings.hidenavigation" />
+
+    <!-- CREQ-55684 mute shortcut to volume editor  -->
+    <feature name="com.nbb.volume.mute.shortcut" />
+
+    <!-- CREQ-55683 CREQ-55682 long press of multi-function key will open the Calendar  -->
+    <feature name="com.nbb.system.long_press_soft_key" />
+
+    <!-- CREQ-55679 Add ascending sound on call setting  -->
+    <feature name="com.nbb.phone.callsettings.ascending_sound_key" />
+
+    <!-- CREQ-55678 CREQ-55677 Add shut down animation  -->
+    <feature name="com.nbb.system.poweroff_animation" />
+	
+	
+	<!-- THIS IS CREQ-55672 Indonesia TKDN SW Requirements Version 5.1 -->
+    <!-- LOCK DOWN ON 2018.08.29 -->
+	<!-- ROO-5734 Add emergency quick_call -->
+	<feature name="com.nbb.phone.emergency.quick_call"/>
+    <feature name="com.nbb.settings.one_hand_mode"/>
+</permissions>

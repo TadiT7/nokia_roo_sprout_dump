@@ -1,0 +1,5 @@
+on post-fs-data
+    # CustManager /data/vendor/cust
+    mkdir /data/vendor/cust 0771 system system
+    chown system system /data/vendor/cust
+    restorecon_recursive /data/vendor/cust

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- ******************* -->
+<!-- Profile for FIH basic -->
+<!-- [MCS-836] HouILin -->
+<!-- ******************* -->
+
+<profile-data>
+    <!--
+        Profile fomula
+            <TAG>VALUE</TAG>    **TAG = Feature name + Requiement key
+
+        Example:
+        <Ecclist_000385>112,911,110,119</Ecclist_000385>
+    -->
+    <!-- Common -->
+
+    <!-- CC/SS/USSD -->
+    <!-- {{ [D78.F-283] -->
+    <!-- 
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category
+        - Condition: there are following values:
+            - 0: ecc only when no sim
+            - 1: ecc always
+            - 2: MMI will show ecc but send to nw as normal call
+        - Custype: the ecc type
+            - 0: ecc with sim card
+            - 1: general ecc for no sim card
+            - 2: ecc for cta            
+            
+    -->
+
+    
+        <!-- General Ecc -->
+
+
+
+
+
+</profile-data>

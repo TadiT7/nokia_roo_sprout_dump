@@ -1,0 +1,12 @@
+on fs
+    setprop ro.product.device ROON_sprout
+    setprop ro.product.model.display TA-1125
+    setprop ro.nfc_hw_support true
+    setprop ro.sec_nfc_gsma_support true
+
+on fs
+    setprop ro.camera.shuttersound.skuid 600ID
+
+on fs
+	setprop ro.build.fingerprint Nokia/Rooster_00WW/ROON_sprout:9/PPR1.180610.011/00WW_2_230:user/release-keys
+	setprop ro.build.description "Rooster_00WW-user 9 PPR1.180610.011 00WW_2_230 release-keys"

@@ -1,0 +1,5 @@
+on fs
+    setprop ro.product.model.display TA-1115
+on fs
+    setprop ro.com.google.clientidbase.am "android-americamovil-{country}"
+    setprop ro.com.google.clientidbase.ms "android-americamovil-{country}-revc"

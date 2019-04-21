@@ -1,0 +1,9 @@
+on fs && property:ro.boot.slot_suffix=_a
+    wait /dev/block/platform/bootdevice/by-name/cda_a
+    mount ext4 /dev/block/platform/bootdevice/by-name/cda_a /vendor/hidden/data noatime nosuid nodev barrier=1
+    restorecon_recursive /vendor/hidden/data
+
+on fs && property:ro.boot.slot_suffix=_b
+    wait /dev/block/platform/bootdevice/by-name/cda_b
+    mount ext4 /dev/block/platform/bootdevice/by-name/cda_b /vendor/hidden/data noatime nosuid nodev barrier=1
+    restorecon_recursive /vendor/hidden/data

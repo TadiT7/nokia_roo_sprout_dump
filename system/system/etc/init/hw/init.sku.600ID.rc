@@ -1,0 +1,2 @@
+on fs
+    setprop ro.camera.shuttersound.skuid 600ID

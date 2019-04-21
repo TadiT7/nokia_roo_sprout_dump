@@ -1,0 +1,34 @@
+on early-boot
+    # set property ro.hardware.fingerprint for vendor HAL library load
+    setprop ro.hardware.fingerprint fpc1035_roo
+    setprop sys.fp.firmware.version  Fpc-V01.00.01
+on boot
+    setprop sys.fp.navigation.enable 1
+
+
+on post-fs-data
+    chmod 666 /sys/bus/spi/devices/spi32766.0/clk_enable
+    chmod 666 /sys/bus/spi/devices/spi32766.0/hw_reset
+    chmod 666 /sys/bus/spi/devices/spi32766.0/irq
+    chmod 666 /sys/bus/spi/devices/spi32766.0/wakeup_enable
+    mkdir /data/system/fingerprint 0770 system system
+
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service_fpc
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    class late_start
+    user system
+    group system input
+    
+service fqcfingerprint /vendor/bin/fqcfingerprint
+    user system
+    oneshot
+    disabled
+
+on property:vendor.sys.fqcfingerprint=1
+    stop vendor.fps_hal
+    start fqcfingerprint
+
+on property:vendor.sys.fqcfpend=1
+    start vendor.fps_hal

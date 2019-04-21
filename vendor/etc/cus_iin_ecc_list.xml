@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<!-- ******************* -->
+<!-- Profile for FIH basic -->
+<!-- [MCS-836] HouILin -->
+<!-- ******************* -->
+
+<profile-data>
+    <!--
+        Profile fomula
+            <TAG>VALUE</TAG>    **TAG = Feature name + Requiement key
+
+        Example:
+        <Ecclist_000385>112,911,110,119</Ecclist_000385>
+    -->
+    <!-- Common -->
+
+    <!-- CC/SS/USSD -->
+    <!-- {{ [D78.F-283] -->
+    <!-- 
+        The attribute definition for tag EccEntry:
+        - Ecc: the emergnecy number
+        - Category: the service category
+        - Condition: there are following values:
+            - 0: ecc only when no sim
+            - 1: ecc always
+            - 2: MMI will show ecc but send to nw as normal call
+        - Custype: the ecc type
+            - 0: ecc with sim card
+            - 1: general ecc for no sim card
+            - 2: ecc for cta            
+            
+    -->
+
+    
+    <!-- TW -->
+    <EccEntry Mcc="000" Ecc="111" Category="0" Condition="1" IIN="898205" />
+    <EccEntry Mcc="000" Ecc="112" Category="0" Condition="1" IIN="898205" />
+    <EccEntry Mcc="000" Ecc="113" Category="0" Condition="2" IIN="898205"  />
+    <EccEntry Mcc="000" Ecc="117" Category="0" Condition="2" IIN="898205"  />
+
+    <EccEntry Mcc="000" Ecc="118" Category="0" Condition="0" IIN="898205"  />
+    <EccEntry Mcc="000" Ecc="119" Category="0" Condition="0" IIN="898205"  />    
+    <EccEntry Mcc="000" Ecc="122" Category="0" Condition="0" IIN="898205"  />
+    <EccEntry Mcc="000" Ecc="125" Category="0" Condition="1" IIN="898205"  />
+    <EccEntry Mcc="000" Ecc="911" Category="0" Condition="1" IIN="898205"  />
+    
+    <!-- CN -->    
+    <EccEntry Mcc="000" Ecc="110" Category="0" Condition="2" IIN="89886"  />
+    <EccEntry Mcc="000" Ecc="112" Category="0" Condition="0" IIN="89886"  />
+    <EccEntry Mcc="000" Ecc="119" Category="0" Condition="2" IIN="89886"  />
+    
+    <EccEntry Mcc="000" Ecc="000" Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="08"  Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="118" Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="999" Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="112" Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="911" Category="0" Condition="1" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="110" Category="0" Condition="2" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="119" Category="0" Condition="2" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="120" Category="0" Condition="2" IIN="8986"  />
+    <EccEntry Mcc="000" Ecc="122" Category="0" Condition="2" IIN="8986"  />
+    
+
+</profile-data>
